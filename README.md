@@ -39,12 +39,12 @@ Returns an array of bobsled/skeleton tracks
 ```.json
 [
   {
-    "id":1,
-    "name":"Altenberg"
+    "id": 1,
+    "name": "Altenberg"
   },
   {
-    "id":2,
-    "name":"Calgary"
+    "id": 2,
+    "name": "Calgary"
   }
 ]
 ```
