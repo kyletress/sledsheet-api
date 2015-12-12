@@ -1,6 +1,6 @@
 # Sledsheet API Documentation
 ## Authentication
-Sledsheet is a read-only API. Authentication is not required. 
+Sledsheet is a read-only API. Authentication is not required. The URL is `http://www.sledsheet.com/api`.
 
 ## API Endpoints
 ### GET /v1/athletes.json
