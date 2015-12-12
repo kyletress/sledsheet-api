@@ -123,3 +123,65 @@ Returns the given timesheet with an array of associated entries. TODO: Make entr
   ]
 }
 ```
+
+### GET /v1/seasons/:id
+Returns an array of the given season's world rankings
+
+#### Params
+* **men** *(optional)* - Return an array of men's points
+* **women** *(optional)* - Return an array of women's points
+
+#### Response
+```.json
+[
+  {
+    "id": 5,
+    "athlete": "Martins Dukurs",
+    "world_rank": "1",
+    "nation_rank": "LAT 1",
+    "points": "675",
+    "country": "LV"
+  },
+  {
+    "id": 4,
+    "athlete": "Alexander Tretiakov",
+    "world_rank": "2",
+    "nation_rank": "RUS 1",
+    "points": "630",
+    "country": "RU"
+  }
+]
+```
+
+### GET /v1/seasons/:id/athletes/:id
+Return the given athlete and an array of their points for the given season
+
+#### Response
+```.json
+{
+  "athlete": {
+    "id": 2,
+    "name": "Matthew Antoine",
+    "country": "USA",
+    "gender": "male",
+    "total": 400,
+    "points": [
+      {
+        "id": 174,
+        "timesheet": "Winterberg WC",
+        "value": 152
+      },
+      {
+        "id": 175,
+        "timesheet": "Altenberg WC",
+        "value": 144
+      },
+      {
+        "id":176,
+        "timesheet": "Konigssee WC",
+        "value": 104
+      }
+    ]
+  }
+}
+```
