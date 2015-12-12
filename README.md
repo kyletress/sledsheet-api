@@ -75,5 +75,51 @@ Returns the given track
     }
   }
 }
-  
+```
+
+### GET /v1/timesheets
+Returns an array of timesheets
+
+#### Response
+```.json
+[
+  {
+    "id": 176,
+    "name": "Winterberg World Cup Race 2015-16 Men"
+  },
+  {
+    "id": 174,
+    "name": "Altenberg World Cup Race 2015-16 Men"
+  }
+]
+```
+
+### GET /v1/timesheets/:id
+Returns the given timesheet with an array of associated entries. TODO: Make entries and runs optional parameters. 
+
+#### Response
+```.json
+{
+  "id": 174,
+  "name": "Altenberg World Cup Race 2015-16 Men",
+  "date": "2015-11-28T00:00:00.000Z",
+  "status": "complete",
+  "entries": [
+    {
+      "id": 4251,
+      "athlete": "Martins Dukurs",
+      "total_time": 5660
+    },
+    {
+      "id": 4252,
+      "athlete": "Alexander Tretiakov",
+      "total_time": 5663
+    },
+    {
+      "id": 4253,
+      "athlete": "Nikita Tregybov",
+      "total_time": 5670
+    }
+  ]
+}
 ```
