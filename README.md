@@ -22,13 +22,10 @@ Returns the given athlete
 #### Response
 ```.json
 {
-  "athlete":
-    {
-      "id":1,
-      "name":"Kyle Tress",
-      "country":"USA",
-      "gender":"male"
-    }
+  "id":1,
+  "name":"Kyle Tress",
+  "country":"USA",
+  "gender":"male"
 }
 ```
 
