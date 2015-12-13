@@ -6,6 +6,9 @@ Sledsheet is a read-only API. Authentication is not required. The URL is `http:/
 ### GET /v1/athletes
 Returns an array of all athletes
 
+#### Parameters
+* **q** *(optional)* - a search term to limit the returned results
+
 #### Response
 ```json
 [
@@ -124,6 +127,34 @@ Returns the given timesheet with an array of associated entries. TODO: Make entr
 }
 ```
 
+### GET /v1/circuits
+Return an array of all circuits
+
+#### Response
+```.json
+[
+  {
+    "id":8,
+    "name":"World Championship"
+  },
+  {
+    "id":1,
+    "name":"World Cup"
+  }
+]
+```
+
+### GET /v1/circuits/:id 
+Returns the given circuit
+
+#### Response
+```.json
+{
+  "id":1,
+  "name":"World Cup"
+}
+```
+
 ### GET /v1/seasons/:id
 Returns an array of the given season's world rankings
 
@@ -159,29 +190,22 @@ Return the given athlete and an array of their points for the given season
 #### Response
 ```.json
 {
-  "athlete": {
-    "id": 2,
-    "name": "Matthew Antoine",
-    "country": "USA",
-    "gender": "male",
-    "total": 400,
-    "points": [
-      {
-        "id": 174,
-        "timesheet": "Winterberg WC",
-        "value": 152
-      },
-      {
-        "id": 175,
-        "timesheet": "Altenberg WC",
-        "value": 144
-      },
-      {
-        "id":176,
-        "timesheet": "Konigssee WC",
-        "value": 104
-      }
-    ]
-  }
+  "id": 5,
+  "name": "Martins Dukurs",
+  "country": "LAT",
+  "gender": "male",
+  "total": 450,
+  "points": [
+    {
+      "id": 176,
+      "timesheet": "Winterberg WC",
+      "value": 225
+    },
+    {
+      "id": 174,
+      "timesheet": "Altenberg WC",
+      "value": 225
+    }
+  ]
 }
 ```
