@@ -147,6 +147,10 @@ Return an array of all circuits
 ### GET /v1/circuits/:id 
 Returns the given circuit
 
+#### Parameters
+* **include** *(optional)* - Array of entities to include (`points`)
+* **gender** *(optional)* - If including points, return the points table for the given gender. Returns both by default. (`men`, `women`)
+
 #### Response
 ```.json
 {
