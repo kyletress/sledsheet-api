@@ -98,7 +98,13 @@ Returns an array of timesheets
 ```
 
 ### GET /v1/timesheets/:id
-Returns the given timesheet with an array of associated entries. TODO: Make entries and runs optional parameters. 
+Returns the given timesheet. 
+
+#### Parameters
+* **entries** *(optional)* - Include entries
+* **runs** *(optional)* - Include each entry's runs
+* **intermediates** *(optional)* - Include the run intermediates 
+* **differences** *(optional)* - Include the differences from the heat's best run
 
 #### Response
 ```.json
