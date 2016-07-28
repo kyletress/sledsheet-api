@@ -102,9 +102,11 @@ Returns the given timesheet.
 
 #### Parameters
 * **entries** *(optional)* - Include entries
-* **runs** *(optional)* - Include each entry's runs
+* **runs** *(optional, requires entries)* - Include each entry's runs
 * **intermediates** *(optional)* - Include the run intermediates 
 * **differences** *(optional)* - Include the differences from the heat's best run
+
+e.g. /vi/timesheets/:id?entries&runs
 
 #### Response
 ```.json
